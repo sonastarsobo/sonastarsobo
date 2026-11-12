@@ -185,6 +185,14 @@ export async function addQuestion(q) {
   }));
 }
 
+/** Saved logins (username + SOBO-made password) for students the teacher teaches. Empty if migration 004 isn't run. */
+export async function getStudentCredentials(studentIds) {
+  if (!studentIds.length) return [];
+  const { data, error } = await supabase.from('student_credentials').select('student_id,username,password,updated_at').in('student_id', studentIds);
+  if (error) { console.warn('student_credentials:', error.message); return []; }
+  return data;
+}
+
 export async function getStudentProfile(id) {
   return must(await supabase.from('profiles').select('*').eq('id', id).single());
 }
@@ -196,12 +204,14 @@ export async function getQuickChecks(studentId) {
 export async function manageStudents(body) {
   const { data, error } = await supabase.functions.invoke('manage-students', { body });
   if (error) {
-    let msg = error.message;
-    try { msg = (await error.context.json()).error || msg; } catch { /* ignore */ }
+    let msg = error.message, details = null;
+    try { details = await error.context.json(); msg = details.error || msg; } catch { /* ignore */ }
     if (error.name === 'FunctionsFetchError' || error.context?.status === 404) {
       msg = 'The manage-students Edge Function is not deployed yet (see README, step 5).';
     }
-    throw new Error(msg);
+    const err = new Error(msg);
+    if (details) { err.taken = details.taken || []; err.repeated = details.repeated || []; }
+    throw err;
   }
   if (!data?.ok) throw new Error(data?.error || 'Request failed');
   return data;

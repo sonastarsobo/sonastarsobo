@@ -1,6 +1,7 @@
 // Shared UI helpers: top bar, toasts, modals, formatting, accessibility settings.
 import { rootUrl } from './supabase.js';
 import { isMuted, setMuted, onMuteChange, unlockAudio } from './games/sfx.js';
+import { mountGuide } from './guide.js';
 
 /** Escape text for safe use inside HTML strings. */
 export function esc(value) {
@@ -235,12 +236,14 @@ export function renderTopbar(profile) {
     <nav class="nav" id="main-nav">${links}</nav>
     <div class="spacer"></div>
     ${role === 'student' ? `<span class="xp-chip" id="xp-chip" title="Experience points">⭐ ${profile?.xp ?? 0} XP</span>` : ''}
+    <span class="guide-slot" id="guide-slot"></span>
     <button class="icon-btn" id="settings-btn" title="Settings" aria-label="Settings">⚙️</button>
     <a class="user-chip ${location.pathname.endsWith('profile.html') ? 'active' : ''}" href="${rootUrl('profile.html')}" title="My profile">
       <span class="avatar">${esc(initial)}</span><span class="name">${esc(profile?.display_name || '')}</span></a>` }));
   document.body.prepend(header);
   $('#menu-btn').onclick = () => $('#main-nav').classList.toggle('open');
   $('#settings-btn').onclick = openSettings;
+  mountGuide($('#guide-slot'), role);
   if (!document.querySelector('.footer')) {
     document.body.append(el('footer', { class: 'footer', html:
       `SOBO · <a href="${rootUrl('credits.html')}">Credits &amp; privacy</a> · 3D models adapted from Z-Anatomy (CC BY-SA 4.0)` }));
@@ -260,10 +263,12 @@ export function renderPublicBar(active = '') {
       `<a class="${key === active ? 'active' : ''}" href="${rootUrl(href)}" ${key === active ? 'aria-current="page"' : ''}>${label}</a>`).join('')}
       <a class="nav-login" href="${rootUrl('login.html')}">🔑 Log in</a></nav>
     <div class="spacer"></div>
+    <span class="guide-slot" id="guide-slot"></span>
     <img class="partner-logo" src="${rootUrl('assets/img/sona-star-logo.svg')}" alt="Sona Star" title="Sona Star">
     <a class="btn small login-btn" href="${rootUrl('login.html')}">🔑 Log in</a>` }));
   document.body.prepend(header);
   $('#menu-btn').onclick = () => $('#main-nav').classList.toggle('open');
+  mountGuide($('#guide-slot'), 'public');
 }
 
 export function updateXp(xp) {
