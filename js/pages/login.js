@@ -23,8 +23,8 @@ app.innerHTML = `
 <div class="auth-wrap">
   <section class="auth-welcome">
     <div class="auth-logos">
-      <img src="${rootUrl('assets/img/sobo-logo.svg')}" alt="SOBO logo">
-      <img src="${rootUrl('assets/img/sona-star-logo.svg')}" alt="Sona Star logo">
+      <img src="${rootUrl('assets/img/sobo-logo.png')}" alt="SOBO logo">
+      <img src="${rootUrl('assets/img/sona-star-logo.png')}" alt="Sona Star logo">
     </div>
     <h1>Welcome! 👋</h1>
     <p>Log in to explore the human body in 3D, play games and take tests.</p>

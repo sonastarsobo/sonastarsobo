@@ -4,3 +4,6 @@ node_modules/
 # 3D models are served from Supabase Storage (see MODELS_BASE_URL in js/config.js),
 # so the local copies are kept on this computer only and not pushed to GitHub.
 models/*.glb
+
+# Full-size original pictures (the site uses the small web copies in assets/img/)
+assets/img/originals/

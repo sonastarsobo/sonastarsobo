@@ -231,7 +231,7 @@ export function renderTopbar(profile) {
   }).join('');
   const initial = (profile?.display_name || '?').trim().charAt(0).toUpperCase();
   const header = el('header', { class: 'topbar' }, el('div', { class: 'topbar-inner', html: `
-    <a class="brand" href="${rootUrl(role === 'teacher' ? 'teacher/dashboard.html' : 'student/dashboard.html')}"><img class="brand-logo" src="${rootUrl('assets/img/sobo-logo.svg')}" alt="">SOBO</a>
+    <a class="brand" href="${rootUrl(role === 'teacher' ? 'teacher/dashboard.html' : 'student/dashboard.html')}"><img class="brand-logo" src="${rootUrl('assets/img/sobo-logo.png')}" alt="">SOBO</a>
     <button class="icon-btn menu-btn" aria-label="Menu" id="menu-btn">☰</button>
     <nav class="nav" id="main-nav">${links}</nav>
     <div class="spacer"></div>
@@ -257,14 +257,14 @@ export function renderTopbar(profile) {
 export function renderPublicBar(active = '') {
   const tabs = [['index.html', 'home', '🏠 Home'], ['about.html', 'about', 'ℹ️ About'], ['credits.html', 'credits', '📜 Credits']];
   const header = el('header', { class: 'topbar public-bar' }, el('div', { class: 'topbar-inner', html: `
-    <a class="brand" href="${rootUrl('index.html')}"><img class="brand-logo" src="${rootUrl('assets/img/sobo-logo.svg')}" alt="">SOBO</a>
+    <a class="brand" href="${rootUrl('index.html')}"><img class="brand-logo" src="${rootUrl('assets/img/sobo-logo.png')}" alt="">SOBO</a>
     <button class="icon-btn menu-btn" aria-label="Menu" id="menu-btn">☰</button>
     <nav class="nav" id="main-nav">${tabs.map(([href, key, label]) =>
       `<a class="${key === active ? 'active' : ''}" href="${rootUrl(href)}" ${key === active ? 'aria-current="page"' : ''}>${label}</a>`).join('')}
       <a class="nav-login" href="${rootUrl('login.html')}">🔑 Log in</a></nav>
     <div class="spacer"></div>
     <span class="guide-slot" id="guide-slot"></span>
-    <img class="partner-logo" src="${rootUrl('assets/img/sona-star-logo.svg')}" alt="Sona Star" title="Sona Star">
+    <img class="partner-logo" src="${rootUrl('assets/img/sona-star-logo.png')}" alt="Sona Star Innovation" title="Sona Star Innovation">
     <a class="btn small login-btn" href="${rootUrl('login.html')}">🔑 Log in</a>` }));
   document.body.prepend(header);
   $('#menu-btn').onclick = () => $('#main-nav').classList.toggle('open');

@@ -35,8 +35,8 @@ document.getElementById('app').innerHTML = `
 <article class="about-article">
   <header class="about-head">
     <div class="about-logos">
-      <img src="${rootUrl('assets/img/sobo-logo.svg')}" alt="SOBO logo">
-      <img src="${rootUrl('assets/img/sona-star-logo.svg')}" alt="Sona Star Innovation logo">
+      <img src="${rootUrl('assets/img/sobo-logo.png')}" alt="SOBO logo">
+      <img src="${rootUrl('assets/img/sona-star-logo.png')}" alt="Sona Star Innovation logo">
     </div>
     <p class="about-kicker">About SOBO</p>
     <h1>Discover. Explore. Understand.</h1>

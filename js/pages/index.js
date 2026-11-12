@@ -33,8 +33,8 @@ app.innerHTML = `
       </div>
     </div>
     <div class="home-art">
-      <!-- image placeholder: replace assets/img/anatomy-placeholder.svg with the final picture -->
-      <img src="${rootUrl('assets/img/anatomy-placeholder.svg')}" alt="Illustration of the human body and its organs">
+      <!-- hero picture: assets/img/anatomy.jpg (full-size original in assets/img/originals/) -->
+      <img src="${rootUrl('assets/img/anatomy.jpg')}" alt="Two students exploring a model of the human body in a classroom" width="1400" height="962">
     </div>
   </section>
 
