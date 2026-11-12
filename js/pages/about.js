@@ -9,12 +9,12 @@ if (profile) renderTopbar(profile); else renderPublicBar('about');
 
 const start = profile ? rootUrl(profile.role === 'student' ? 'student/dashboard.html' : 'teacher/dashboard.html') : rootUrl('login.html');
 
-// Photo placeholders: put the official photos in assets/img/ and set `photo` below
-// (e.g. photo: 'assets/img/thyagu-valliappa.jpg'). Until then the initials are shown.
+// Official photos: 320px square crops in assets/img/ (full-size originals in assets/img/originals/).
+// Leave `photo` empty to show the initials instead.
 const PEOPLE = [
-  { heading: 'The Vision Behind SOBO', name: 'Mr. Thyagu Valliappa', role: 'CEO, Sona Star Innovation', initials: 'TV', photo: '',
+  { heading: 'The Vision Behind SOBO', name: 'Mr. Thyagu Valliappa', role: 'CEO, Sona Star Innovation', initials: 'TV', photo: 'assets/img/thyagu-valliappa.jpg',
     text: 'Envisioned SOBO and laid its foundation with a forward-thinking approach and a commitment to innovation in education.' },
-  { heading: 'Guidance & Mentorship', name: 'Mr. Rabindra Sah', role: 'Mentor, SOBO', initials: 'RS', photo: '',
+  { heading: 'Guidance & Mentorship', name: 'Mr. Rabindra Sah', role: 'Mentor, SOBO', initials: 'RS', photo: 'assets/img/rabindra-sah.jpg',
     text: 'Guided the SOBO team with invaluable mentorship and continuous support throughout the development journey.' },
 ];
 

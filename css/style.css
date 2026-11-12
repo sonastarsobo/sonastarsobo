@@ -944,3 +944,4 @@ body.page-wide .game-card .tile-grid { grid-template-columns: repeat(4, minmax(0
   box-shadow: 0 20px 44px rgba(30, 10, 80, .35); }
 @media (max-width: 900px) { .home-art img { max-width: 100%; } }
 .about-logos img { height: 88px; }
+.about-photo { border: 3px solid #fff; }
