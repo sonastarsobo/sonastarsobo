@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-label="Abstract illustration of the human body and its organs">
+  <!-- PLACEHOLDER — replace with a real image (keep the name anatomy-placeholder.svg, or update the path in js/pages/index.js). -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".30"/><stop offset="1" stop-color="#ffffff" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="200" cy="250" rx="190" ry="240" fill="url(#glow)"/>
+  <!-- orbit rings -->
+  <g fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="1.5">
+    <ellipse cx="200" cy="250" rx="175" ry="60" transform="rotate(-18 200 250)" stroke-dasharray="4 7"/>
+    <ellipse cx="200" cy="250" rx="160" ry="48" transform="rotate(22 200 250)"/>
+  </g>
+  <!-- body silhouette -->
+  <g fill="url(#body)" stroke="#fff" stroke-opacity=".7" stroke-width="2.5" stroke-linejoin="round">
+    <circle cx="200" cy="70" r="38"/>
+    <path d="M182 104h36l4 18c30 4 50 16 56 40l14 110c2 12-14 16-18 4l-22-96-6 2 4 112-10 170c-1 14-22 14-24 0l-14-150h-4l-14 150c-2 14-23 14-24 0l-10-170 4-112-6-2-22 96c-4 12-20 8-18-4l14-110c6-24 26-36 56-40z"/>
+  </g>
+  <!-- brain -->
+  <g fill="#f0a6b8"><path d="M176 64c0-14 11-22 24-22s24 8 24 22c0 7-4 12-10 13-3 4-8 5-14 5s-11-1-14-5c-6-1-10-6-10-13z"/></g>
+  <path d="M200 44v36M186 56c6 2 8 8 6 14M214 56c-6 2-8 8-6 14" stroke="#c96b86" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- spine -->
+  <g fill="#fff" fill-opacity=".55"><rect x="196" y="112" width="8" height="10" rx="2"/><rect x="196" y="126" width="8" height="10" rx="2"/><rect x="196" y="140" width="8" height="10" rx="2"/><rect x="196" y="154" width="8" height="10" rx="2"/></g>
+  <!-- lungs -->
+  <path d="M190 150c-4-14-22-16-30-4-10 16-12 44-6 60 4 10 20 10 28 2 8-8 12-36 8-58z" fill="#f6a3a3" opacity=".9"/>
+  <path d="M210 150c4-14 22-16 30-4 10 16 12 44 6 60-4 10-20 10-28 2-8-8-12-36-8-58z" fill="#f6a3a3" opacity=".9"/>
+  <!-- heart -->
+  <path d="M206 214c-3-2-18-11-18-23 0-6 5-10 10-10 4 0 6 2 8 5 2-3 4-5 8-5 5 0 10 4 10 10 0 12-15 21-18 23z" fill="#e53950"/>
+  <!-- liver + stomach -->
+  <path d="M164 232c10-8 40-8 44 2 3 8-8 16-24 18-14 2-26-10-20-20z" fill="#9b3b2f" opacity=".9"/>
+  <path d="M214 228c14-6 28 2 26 16-2 16-20 22-30 14-8-6-6-26 4-30z" fill="#f2a65a"/>
+  <!-- intestines -->
+  <g fill="none" stroke="#f3b6a0" stroke-width="7" stroke-linecap="round">
+    <path d="M168 274c0-10 64-10 64 0s-64 4-64 14 64 4 64 14-64 4-64 14 64 4 64 12"/>
+  </g>
+  <path d="M164 268v58c0 8 72 8 72 0v-58" fill="none" stroke="#e98f73" stroke-width="6" stroke-linecap="round"/>
+  <!-- kidneys + bladder -->
+  <path d="M168 256c-8-2-12 6-10 14s10 10 14 4c3-5 2-16-4-18z" fill="#b5532f"/>
+  <path d="M232 256c8-2 12 6 10 14s-10 10-14 4c-3-5-2-16 4-18z" fill="#b5532f"/>
+  <ellipse cx="200" cy="348" rx="12" ry="9" fill="#f7d26a"/>
+  <!-- vessels -->
+  <g fill="none" stroke-width="2.5" stroke-linecap="round" opacity=".85">
+    <path d="M196 214c-2 40-14 90-18 230" stroke="#e53950"/>
+    <path d="M204 214c2 40 14 90 18 230" stroke="#4f7bea"/>
+    <path d="M188 196c-30 8-44 30-58 90" stroke="#e53950"/>
+    <path d="M212 196c30 8 44 30 58 90" stroke="#4f7bea"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#fff">
+    <circle cx="70" cy="120" r="3" opacity=".8"/><circle cx="335" cy="160" r="2.5" opacity=".7"/><circle cx="320" cy="380" r="3" opacity=".6"/>
+    <circle cx="80" cy="390" r="2" opacity=".7"/><circle cx="350" cy="90" r="2" opacity=".6"/>
+  </g>
+  <text x="200" y="508" text-anchor="middle" font-family="Nunito, Arial, sans-serif" font-size="13" font-weight="800" fill="#fff" fill-opacity=".7">Image placeholder</text>
+</svg>

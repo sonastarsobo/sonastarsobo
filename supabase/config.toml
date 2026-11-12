@@ -1,0 +1,3 @@
+# Only needed if you use the Supabase CLI. The Edge Function checks logins itself.
+[functions.manage-students]
+verify_jwt = false
