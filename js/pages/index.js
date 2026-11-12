@@ -17,7 +17,10 @@ renderPublicBar('home');
 app.innerHTML = `
   <section class="hero home-hero">
     <div class="home-hero-text">
-      <div class="pill" style="background:rgba(255,255,255,.2);color:#fff">🎓 For grades 4–7</div>
+      <div class="row home-hero-top">
+        <div class="pill" style="background:rgba(255,255,255,.2);color:#fff">🎓 For grades 4–7</div>
+        <a class="launch-mini" href="${rootUrl('launch.html')}" title="Open the SOBO launch page">🚀 Launch</a>
+      </div>
       <h1>Explore the human body in 3D</h1>
       <p class="muted">Spin a real 3D body, discover what every organ does, pilot a nanobot through the
         bloodstream and rebuild body systems — while your teacher sees how you are doing.</p>

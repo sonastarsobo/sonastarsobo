@@ -817,3 +817,15 @@ body.page-wide .game-card .tile-grid { grid-template-columns: repeat(4, minmax(0
   .about-article ul { columns: 2; column-gap: 48px; }
   .about-article ul li { break-inside: avoid; }
 }
+
+/* ---------- small launch button on the home hero ---------- */
+.home-hero-top { gap: 10px; align-items: center; flex-wrap: wrap; }
+.launch-mini {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 12px; border-radius: 999px; font-size: .85em; font-weight: 800;
+  color: #4a1d00; background: linear-gradient(135deg, #ffd166, #ff9f43);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .18); text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.launch-mini:hover, .launch-mini:focus-visible { transform: translateY(-1px) scale(1.04); box-shadow: 0 4px 14px rgba(0, 0, 0, .25); }
+@media (prefers-reduced-motion: reduce) { .launch-mini { transition: none; } .launch-mini:hover { transform: none; } }
